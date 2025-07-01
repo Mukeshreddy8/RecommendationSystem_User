@@ -8,3 +8,5 @@ qdrant-client
 duckdb
 neo4j
 pandas
+IPython
+langgraph_core

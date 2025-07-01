@@ -1,0 +1,23 @@
+<!-- 📄 src/project/ui/templates/index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🧠 Recommendation Agent</title>
+</head>
+<body>
+    <h1>Agentic AI Recommender</h1>
+    <form method="post">
+        <label for="user">Enter a user name:</label>
+        <input type="text" name="user" required>
+        <button type="submit">Run Agent</button>
+    </form>
+
+    {% if output %}
+        <hr>
+        <h2>🔍 Results:</h2>
+        <pre>{{ output }}</pre>
+    {% endif %}
+</body>
+</html>
+

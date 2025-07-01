@@ -1,9 +1,15 @@
 from src.project.tools.duckDBtool import profile_lookup_tool
 
-if __name__ == "__main__":
-    name_to_lookup = "Theresa Lowe"  # Replace with any valid name
-    profile = profile_lookup_tool.invoke(name_to_lookup)
+# Test inputs
+school = "UCLA"
+workplace = "Tesla"
 
-    print("🔎 User Profile Lookup Result:\n")
-    for key, value in profile.items():
-        print(f"{key}: {value}")
+# Invoke tool
+result = profile_lookup_tool.invoke({
+    "school": school,
+    "workplace": workplace
+})
+
+print("🔍 Tool Output:")
+print(result)
+

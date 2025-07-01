@@ -4,3 +4,7 @@ langgraph
 langchain_community
 langchain_core
 langchain_openai
+qdrant-client
+duckdb
+neo4j
+pandas

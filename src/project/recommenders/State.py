@@ -67,7 +67,7 @@ def qdrant_node(state: State):
     if isinstance(results, dict) and "error" in results:
         return {"qdrant_result": "No semantic recommendations found."}
 
-    # 📏 Let the LLM explain each match based on state + results
+    # The LLM explain each match based on state + results
     explanation_prompt = f"""
     You are an intelligent recommendation assistant.
 
@@ -90,7 +90,7 @@ def aggregator_node(state: State):
     duckdb_matches = state.get("duckdb_result", [])
     qdrant_text = state.get("qdrant_result", "No semantic recommendations found.")
 
-    # 🟡 DuckDB Explanation
+    # DuckDB Explanation
     if duckdb_matches:
         duckdb_text = "These users share your school or workplace:\n"
         for match in duckdb_matches:
